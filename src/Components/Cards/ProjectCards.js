@@ -18,6 +18,12 @@ const Button = styled.a`
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
+  @media (max-width: 960px) {
+    display: block;
+  }
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 const Card = styled.div`
   width: 330px;

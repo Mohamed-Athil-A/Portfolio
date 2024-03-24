@@ -1,3 +1,5 @@
+import HeroImage from "../Images/HeroImage.jpg";
+
 export const Bio = {
   name: "Mohamed Athil",
   roles: [
@@ -262,9 +264,8 @@ export const projects = [
     title: "Usepopcorn",
     date: "Jun 2023 - Jul 2023",
     description:
-      "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
-    image:
-      "https://dragon.online-convert.com/download-file/9ea29a86-d251-4a40-a2b8-e527287098e3/2900f3b6-6046-419f-b85e-fdfad30d7052",
+      "its a movie website using the api of omdbapi you can search any type of movie and also you add watchlist or remove from the watch list and also add rating the movie and how much time you spen on the time with that movies all the details you can share itf fulll of logical app",
+    image: "https://i.ibb.co/tD4HVxC/usepopcorn.png",
     tags: ["React", "Redux", "Tailwindcss", "Emailjs"],
     category: "web app",
     github: "https://github.com/Mohamed-Athil-A/Usepopcorn",
@@ -275,36 +276,20 @@ export const projects = [
     title: "Nike-2.0",
     date: "Apr 2023 - May 2023",
     description:
-      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
-    image:
-      "https://dragon.online-convert.com/download-file/9a82f44f-5e61-4bff-90db-296552238874/34c7054b-bc5d-4381-a8bb-ddaea1fd3e1e",
+      "Its a Nike-2.0 website using Tailwindcss this is my first project using tailwind css this app is fully mobile responsive also",
+    image: "https://i.ibb.co/PW7FM0K/Nike.png",
     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
     category: "web app",
     github: "https://github.com/rishavchanda/Podstream",
     webapp: "https://nike-2-0-gules.vercel.app/",
-    member: [
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
-    ],
   },
   {
     id: 1,
     title: "Eat-N-Split",
     date: "Oct 2022 - Present",
     description:
-      "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
-    image:
-      "https://dragon.online-convert.com/download-file/57c47e83-68bb-4d30-9eac-eda6162ab693/8cddcdd7-231d-4fbe-b048-1fc76f74d671",
+      "Developed a first react.js project called Eat-N-Split this app is used for spliting our biils and debts and credits are stored by the app",
+    image: "https://i.ibb.co/vJ1d8jW/Eat-n-split.png",
     tags: ["React Js", "Redux", "Imdbapi"],
     category: "web app",
     github: "https://github.com/Mohamed-Athil-A/Eat-N-Split",
@@ -316,8 +301,7 @@ export const projects = [
     date: "Jan 2023 - Mar 2023",
     description:
       "Its an online dress shopping website called Trend trove using html, css and it fully responsive",
-    image:
-      "https://dragon.online-convert.com/download-file/42980522-af86-4fd7-87b9-9eadde1bd4bc/daf870a8-654c-47f0-8533-dd01ab3afe4b",
+    image: "https://i.ibb.co/vY66S8n/Trend-Trove.png",
     tags: ["HTML", "CSS"],
     category: "machine learning",
     github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
@@ -329,8 +313,7 @@ export const projects = [
     date: "Dec 2021 - Apr 2022",
     description:
       "Its an digital marketing website called Promo agency using html, css and it fully responsive",
-    image:
-      "https://dragon.online-convert.com/download-file/371f1a4d-5cc8-4a93-b974-bf0f6fd3654c/4222f67a-0b98-4f89-ab64-d2a06cd378b9",
+    image: "https://i.ibb.co/rwnRrVK/Promoagency.png",
     tags: ["HTML", "CSS"],
     category: "android app",
     github: "https://github.com/rishavchanda/Buckoid-Android-App",
@@ -342,8 +325,7 @@ export const projects = [
     date: "Jun 2023 - Jul 2023",
     description:
       "Its a dice rolling game called pig game my first JavaScript project using HTML, CSS.",
-    image:
-      "https://dragon.online-convert.com/download-file/11f32810-acab-4b4d-91c8-3695da69ccf3/8a2f53d7-84ec-4d0d-9b4e-0878040e46ea",
+    image: "https://i.ibb.co/vHsPgNw/Pig-game.png",
     tags: ["HTML", "CSS", "JavaSccript"],
     category: "android app",
     github: "https://github.com/Mohamed-Athil-A/PIG-GAME",

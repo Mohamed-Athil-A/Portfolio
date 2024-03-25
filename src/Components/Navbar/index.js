@@ -182,7 +182,7 @@ const Navbar = () => {
               fontSize: "40px",
             }}
           >
-            <DiCssdeck /> <Span>Athil Portfolio</Span>
+            <DiCssdeck /> <Span>Portfolio</Span>
           </a>
         </NavLogo>
         <MobileIcon>

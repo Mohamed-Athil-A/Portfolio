@@ -149,7 +149,7 @@ const MobileMenu = styled.div`
   z-index: ${({ isOpen }) => (isOpen ? "10" : "-1")};
 `;
 //
-const MobileMenuLinks = styled(LinkR)`
+const MobileMenuLinks = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
@@ -182,7 +182,7 @@ const Navbar = () => {
               fontSize: "40px",
             }}
           >
-            <DiCssdeck /> <Span>Portfolio</Span>
+            <DiCssdeck /> <Span>Athil Portfolio</Span>
           </a>
         </NavLogo>
         <MobileIcon>
@@ -191,8 +191,9 @@ const Navbar = () => {
         <NavItems>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#project">Projects</NavLink>
+          <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Education</NavLink>
+          <NavLink href="#contact">Contact</NavLink>
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">

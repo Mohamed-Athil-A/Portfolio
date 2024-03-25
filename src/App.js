@@ -10,6 +10,7 @@ import Projects from "./Components/Projects/Project";
 import { useState } from "react";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import { ToastContainer } from "react-toastify";
 
 //background color for skills and education section
 const Body = styled.div`
@@ -53,6 +54,7 @@ function App() {
           </Wrapper>
           <Footer />
         </Body>
+        <ToastContainer />
       </BrowserRouter>
     </ThemeProvider>
   );

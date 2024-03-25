@@ -1,5 +1,3 @@
-import HeroImage from "../Images/HeroImage.jpg";
-
 export const Bio = {
   name: "Mohamed Athil",
   roles: [

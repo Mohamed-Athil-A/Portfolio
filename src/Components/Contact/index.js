@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Snackbar } from "@mui/material";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Container = styled.div`
   display: flex;
@@ -129,35 +129,88 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
+  cursor: pointer;
 `;
 
 const Contact = () => {
-  //hooks
-  const [open, setOpen] = React.useState(false);
+  // Hooks
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
   const form = useRef();
 
+  // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!name || !email || !subject || !message) {
+      return notify1();
+    }
+
+    if (!/^\w+([\.-]?\w+)*@gmail\.com$/.test(email)) {
+      return notify2();
+    }
+
+    // Email sending
     emailjs
       .sendForm(
-        "service_tox7kqs",
-        "template_nv7k7mj",
+        "service_14ep2qy",
+        "template_ou58p7j",
         form.current,
-        "SybVGsYS52j2TfLbi"
+        "Jkahv8WBTbzH-t331"
       )
       .then(
         (result) => {
-          setOpen(true);
           form.current.reset();
+          notify();
         },
         (error) => {
           console.log(error.text);
+          toast.error("Error sending email. Please try again later.");
         }
       );
   };
 
+  const notify = () => {
+    toast.success("Email Sent Successfully!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+  const notify1 = () => {
+    toast.error("Please fill out all fields!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+  const notify2 = () => {
+    toast.error("Please enter a valid email!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+
   return (
-    <Container>
+    <Container id="contact">
       <Wrapper>
         <Title>Contact</Title>
         <Desc>
@@ -165,19 +218,33 @@ const Contact = () => {
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
+          <ContactInput
+            placeholder="Your Email"
+            name="from_email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <ContactInput
+            placeholder="Your Name"
+            name="from_name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <ContactInput
+            placeholder="Subject"
+            name="subject"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          />
+          <ContactInputMessage
+            placeholder="Message"
+            rows="4"
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={() => setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
       </Wrapper>
     </Container>
   );

@@ -220,7 +220,7 @@ const Navbar = () => {
             </MobileMenuLinks>
 
             <MobileMenuLinks
-              href="#project"
+              href="#projects"
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
